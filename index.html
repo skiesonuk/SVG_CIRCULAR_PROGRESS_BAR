@@ -8,25 +8,27 @@
 </head>
 <style>
     .track {
-        stroke-width: 1;
-        stroke: lightgrey;
+        stroke-width: 12;
+        stroke: rgb(248, 223, 223);
         fill: none;
     }
-    
+
     .progress {
-        stroke-width: 10;
-        stroke: rgb(59, 56, 56);
+        stroke-width: 15;
+        stroke: rgb(33, 4, 255);
         stroke-linecap: round;
-        fill: none;
+        fill: rgb(156, 255, 143);
         transform: rotate(270deg);
         transform-origin: center;
+        /* transform: none|transform-functions(rotate/translate[3d]/scale/skew|initial|inherit; */
+        /* x-axis y-axis z-axis|initial|inherit; left/center/right/length/%*/
     }
 </style>
 
 <body>
     <svg width="250" height="250">
-      <circle r="100" cx="125" cy="125" class="track"></circle>
-      <circle r="100" cx="125" cy="125" class="progress"></circle>
+        <circle r="100" cx="125" cy="125" class="track"></circle>
+        <circle r="100" cx="125" cy="125" class="progress"></circle>
     </svg>
 
 </body>
@@ -39,7 +41,7 @@
     progressCircle.style.strokeDasharray = circumference;
 
     //0 to 100
-    setProgress(95);
+    setProgress(5);
 
     function setProgress(percent) {
         progressCircle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
